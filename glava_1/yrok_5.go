@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
-
+import "fmt"
 func main() {
 	var a int8 = 5
 	var b int8 = 8
