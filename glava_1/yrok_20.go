@@ -31,7 +31,6 @@ func main() {
 	fmt.Println("===========================")
 
 	name := " ивАн             "
-
 	fmt.Println(Greetings(name))
 
 }
@@ -45,12 +44,20 @@ func IsValid(id int, text string) bool {
 	return true
 }
 
+// func Greetings(name string) string {
+// 	greetings := "Привет, "
+// 	name2 := strings.Trim(name, " ")
+// 	name2 = strings.ToLower(name2)
+// 	name2 = strings.Title(name2)
+// 	return greetings + name2 + "!"
+// }
+
 func Greetings(name string) string {
-	greetings := "Привет, "
-	name2 := strings.Trim(name, " ")
-	name2 = strings.ToLower(name2)
-	name2 = strings.Title(name2)
-	return greetings + name2 + "!"
+	name = strings.Trim(name, " ")
+	name = strings.ToLower(name)
+	name = strings.Title(name)
+	// return greetings + name2 + "!"
+	return fmt.Sprintf("Привет, %s!", name)
 }
 
 //Привет, Иван!

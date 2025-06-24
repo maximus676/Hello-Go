@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+
 func main() {
 	var a int8 = 5
 	var b int8 = 8
@@ -13,13 +14,21 @@ func main() {
 	}
 
 	var c int = 3
-	switch c + 2 {
-	case 7:
+	switch {
+
+	case c == 7:
 		fmt.Println("c = 7")
-	case 8:
+	case c == 8:
 		fmt.Println("c = 8")
-	case 6, 5, 4:
+	case c == 6, c == 5, c == 3:
 		fmt.Println("c = 6 или 5 или 4, но это не точно")
+		fallthrough
+	case c < 1:
+		fmt.Println("c < 1")
+		fallthrough
+	case c < 2:
+		fmt.Println("c < 2")
+		fallthrough // тут уже не совсем корректно ставиить так как выполниться последующие default что быдет не верно
 	default:
 		fmt.Println("значение переменной c не определено")
 	}
