@@ -64,3 +64,33 @@ strings.Title("привет, джон") // "Привет, Джон"
 Урок 21
 1) Функция HasPrefix используется для проверки, начинается ли строка с указанного префикса
    strings.HasPrefix(name, "A")   -  если начинается name с "A"  
+
+Урок 22 
+1) Для замены символов в строке существует функция ReplaceAll(s, old, new string) string из пакета strings:
+
+strings.ReplaceAll("hello world!", "world!", "buddy!")  // hello buddy!
+strings.ReplaceAll("one two three", " ", "_")           // one_two_three 
+============================================================================
+Структуры  (объекты)
+1) 
+type Person struct {
+    // [название поля] [тип данных]
+    Name string
+    Age int
+}
+func main() {
+    p := Person{Name: "John", Age: 25}
+}
+2) Регистр первой буквы в названии структуры и полей означает публичность точно так же, как в переменных и функциях. 
+Если первая буква заглавная, то структуру можно инициализировать во внешних пакетах
+3) В языке программирования Go, пакет encoding/json предоставляет функции для работы с JSON, включая функции 
+Marshal и Unmarshal.
+func main() {
+    p := Person{Name: "Alice", Age: 30}
+
+    jsonData, err := json.Marshal(p)          // Преобразуем структуру в JSON   (Marshal)
+    if err != nil { 
+        fmt.Println("Ошибка при преобразовании в JSON:", err)
+        return
+    }
+}
