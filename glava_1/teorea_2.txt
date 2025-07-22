@@ -94,3 +94,4 @@ func main() {
         return
     }
 }
+4) strings.Contains(req.FirstName, " ") // Проверяет есть ли в тексте FirstName пропуски через проблел  (req -переменная в которой сидит структура (объект))

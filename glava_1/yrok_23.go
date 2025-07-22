@@ -34,8 +34,8 @@ func main() {
 }
 
 type UserCreateRequest struct {
-	FirstName string // не может быть пустым; не может содержать пробелы
-	Age       int    // не может быть 0 или отрицательным; не может быть больше 150
+	FirstName string // ПО ЗАДАНИЮ не может быть пустым; не может содержать пробелы
+	Age       int    // ПО ЗАДАНИЮ  не может быть 0 или отрицательным; не может быть больше 150
 }
 
 func Validate(req UserCreateRequest) string { //UserCreateRequest тут как тип данных   req это переменная с моим объектом
@@ -46,3 +46,4 @@ func Validate(req UserCreateRequest) string { //UserCreateRequest тут как 
 	}
 	return ""
 }
+
